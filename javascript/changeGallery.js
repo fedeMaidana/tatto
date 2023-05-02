@@ -5,8 +5,10 @@ categories.forEach(category => {
     category.addEventListener('click', () => {
         const categoryId = category.getAttribute('id')
 
-        if(category === 'all'){
-            products.style.display = 'flex'
+        if(categoryId === 'all'){
+            products.forEach(product => {
+                product.style.display = 'flex'
+            })
         }else{
             products.forEach(product => {
                 if(product.classList.contains(categoryId)) {
@@ -18,4 +20,3 @@ categories.forEach(category => {
         }
     })
 })
-
