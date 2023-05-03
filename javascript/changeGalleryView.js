@@ -1,22 +1,29 @@
 const categories = document.querySelectorAll('.categories li')
-const products = document.querySelectorAll('.gallery .product')
+const products = document.getElementsByClassName('product')
 
 categories.forEach(category => {
     category.addEventListener('click', () => {
+
+        categories.forEach(function(c){
+            c.style.backgroundColor = ''
+        })
+
+        category.style.backgroundColor = 'rgb(247 85 154)'
+
         const categoryId = category.getAttribute('id')
 
         if(categoryId === 'all'){
-            products.forEach(product => {
+            for (const product of products) {
                 product.style.display = 'flex'
-            })
+            }
         }else{
-            products.forEach(product => {
+            for (const product of products) {
                 if(product.classList.contains(categoryId)) {
                     product.style.display = 'flex'
                 }else{
                     product.style.display = 'none'
                 }
-            })
+            }
         }
     })
 })

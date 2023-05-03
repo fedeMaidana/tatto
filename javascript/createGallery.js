@@ -11,8 +11,8 @@ fetch('json/images.json')
             divCard.classList.add(`${card.categorie}`)
 
             const image =  document.createElement('img')
-            image.src = `./images/${card.image}`
-            image.alt = `./images/${card.description}`
+            image.setAttribute('data-src', `./images/${card.image}`)
+            image.alt = `${card.description}`
 
             divCard.appendChild(image)
 
