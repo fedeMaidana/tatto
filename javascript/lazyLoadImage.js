@@ -11,6 +11,6 @@ function lazyLoadImage(){
         if(images.length === 0) document.removeEventListener('scroll', lazyLoadImage)
 }
 
-document.addEventListener('load', lazyLoadImage)
+//document.addEventListener('load', lazyLoadImage)
 
 document.addEventListener('scroll', lazyLoadImage)

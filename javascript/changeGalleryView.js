@@ -1,7 +1,10 @@
 const categories = document.querySelectorAll('.categories li')
 const products = document.getElementsByClassName('product')
 
+categories[0].style.backgroundColor = 'rgb(247 85 154)'
+
 categories.forEach(category => {
+
     category.addEventListener('click', () => {
 
         categories.forEach(function(c){
