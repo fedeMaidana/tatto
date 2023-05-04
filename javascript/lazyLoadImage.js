@@ -2,7 +2,7 @@ function lazyLoadImage(){
         let images = document.querySelectorAll('img[data-src]')
 
         images.forEach(function(img){
-            if(img.getBoundingClientRect().top < window.innerHeight){
+            if(img.getBoundingClientRect().top < window.innerHeight && img.complete){
                 img.src = img.getAttribute('data-src')
                 img.removeAttribute('data-src')
             }

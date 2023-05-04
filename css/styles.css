@@ -214,8 +214,9 @@ main{
 .tres{
     /* background-color: rgb(51, 89, 51); */
     height: auto;
-
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .categories{
     width: 100%;
@@ -251,6 +252,8 @@ main{
     justify-content: center;
     border: 2px solid var(--fourth-color);
     border-radius: 10px;
+    max-height: 750px;
+    overflow: hidden;
 }
 .product {
     border-radius: 10px;
@@ -265,6 +268,16 @@ main{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+.load-more-images{
+    margin: 0 auto;
+    background-color: var(--second-color);
+    padding: 10px;
+    border-radius: 10px;
+    transform: translateY(-20px);
+    font-weight: 800;
+    font-family: var(--second-font);
+    cursor: pointer;
 }
 
 .cuatro{
